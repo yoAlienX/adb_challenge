@@ -1,0 +1,41 @@
+{
+  "problem_id": "1e05d3e5593e9f38955e8ff4271a15d65e538ed6555955aff2f84e2d3f8e5fda",
+  "method": "example_mc",
+  "execution": "classical_cpu",
+  "estimates": {
+    "term_expected_principal_loss_usd": 10109519.958496094,
+    "term_joint_attachment_probability": 0.04400634765625,
+    "term_portfolio_loss_exceedance_probability": 0.0125579833984375,
+    "term_portfolio_stop_loss_usd": 292129.5166015625,
+    "term_both_bonds_exhausted_probability": 1.52587890625e-05
+  },
+  "intervals": {
+    "term_expected_principal_loss_usd": [
+      9943752.83900157,
+      10275287.077990618
+    ],
+    "term_joint_attachment_probability": [
+      0.042435997123609986,
+      0.045576698188890014
+    ],
+    "term_portfolio_loss_exceedance_probability": [
+      0.011705419000858157,
+      0.013410547796016843
+    ],
+    "term_portfolio_stop_loss_usd": [
+      265848.3026608116,
+      318410.7305423134
+    ],
+    "term_both_bonds_exhausted_probability": [
+      0.0,
+      4.5165466072693696e-05
+    ]
+  },
+  "resources": {
+    "elapsed_seconds": 0.011943249992327765,
+    "preparation_seconds": 0.000978999974904582,
+    "shots": 0,
+    "qubits": 0,
+    "model_evaluations": 65536
+  }
+}

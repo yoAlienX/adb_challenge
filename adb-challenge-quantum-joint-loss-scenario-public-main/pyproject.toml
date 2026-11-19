@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joint-loss-baseline"
+version = "0.5.0"
+description = "Classical joint-loss baseline and validation of submitted estimates"
+authors = [{name = "James Edward Ball"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<10"]
+notebook = ["jupyterlab>=4,<5"]
+
+[project.scripts]
+qjlb = "qjlb.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

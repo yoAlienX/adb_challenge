@@ -1,0 +1,23 @@
+World Bank Central Asia event-loss data - CC BY 4.0
+
+Sources:
+Central Asia seismic risk - Event Loss Tables (ELTs)
+https://datacatalog.worldbank.org/search/dataset/0064272/central-asia-seismic-risk-event-loss-tables-elts
+Central Asia flood risk - Event Loss Tables (ELTs)
+https://datacatalog.worldbank.org/search/dataset/0064269/central-asia-flood-risk-event-loss-tables-elts
+Licence: https://creativecommons.org/licenses/by/4.0/
+
+Source programme: Strengthening Financial Resilience and Accelerating Risk
+Reduction in Central Asia (SFRARR), supported by the European Union, World
+Bank and GFDRR. Original model and report authors retain credit:
+https://nhess.copernicus.org/articles/24/3851/2024/
+https://nhess.copernicus.org/articles/25/403/2025/
+
+Changes: selected current national/regional economic-loss totals; aligned
+countries within each peril; filled absent national rows with zero under the
+checked convention; preserved annual rates, means and SDs; converted to NPZ.
+No inflation adjustment. Snapshot: 15 October 2026.
+
+Retain source credit, the licence link and the description of changes when
+redistributing the data. The code licence applies separately. The source
+organisations have not endorsed this baseline or its synthetic contract terms.

@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "track": "worldbank_elt",
+  "dataset_directory": "../data",
+  "countries": [
+    "TJK",
+    "UZB"
+  ],
+  "peril_order": [
+    "seismic",
+    "flood"
+  ],
+  "attachment_usd": [
+    [
+      250000000.0,
+      250000000.0
+    ],
+    [
+      150000000.0,
+      150000000.0
+    ]
+  ],
+  "exhaustion_usd": [
+    [
+      1000000000.0,
+      1000000000.0
+    ],
+    [
+      400000000.0,
+      400000000.0
+    ]
+  ],
+  "limit_usd": [
+    80000000.0,
+    80000000.0
+  ],
+  "portfolio_threshold_usd": 80000000.0,
+  "contract_note": "Synthetic loss-based payments per row, with fixed conditional mean losses and no annual or term cap."
+}

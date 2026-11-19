@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source_snapshot": "2026-10-15",
+  "units": "USD; current exposure scenario (2020); no inflation adjustment",
+  "loss_semantics": "Conditional mean loss; standard deviation retained separately and unused by the baseline",
+  "perils": {
+    "seismic": {
+      "regional_rows": 419968,
+      "country_order": [
+        "KGZ",
+        "TJK",
+        "KAZ",
+        "TKM",
+        "UZB"
+      ],
+      "missing_country_rows_filled_zero": {
+        "KGZ": 127040,
+        "TJK": 137260,
+        "KAZ": 160789,
+        "TKM": 294237,
+        "UZB": 173732
+      },
+      "event_label_mismatches": 0,
+      "rate_mismatches": 0,
+      "regional_reconciliation_failures": 0,
+      "maximum_absolute_regional_residual_usd": 118543.0,
+      "maximum_fraction_of_tolerance": 0.9220498182684873,
+      "maximum_relative_regional_residual": 1.3292828868565124e-05,
+      "strict_half_unit_failures": 5115,
+      "rounding_rule": "one unit at sixth significant digit per national and regional mean loss; 0.000002 USD absolute allowance; permits export aggregation differences",
+      "regional_rate_sum_per_year": 41.99889984,
+      "source_rate_values": [
+        0.000100005
+      ],
+      "national_aal_usd": {
+        "KGZ": 191454160.20076144,
+        "TJK": 237899268.76650998,
+        "KAZ": 350824766.9181645,
+        "TKM": 34403664.97853893,
+        "UZB": 1109295291.1986985
+      },
+      "regional_aal_usd": 1923877130.2632182,
+      "resolution": "Use ID within each peril and source version. Zero-fill is the baseline convention for absent national rows, validated by regional reconciliation within the declared export tolerance. No cross-peril ID matching.",
+      "published_aal_million_usd": {
+        "KGZ": 191.5,
+        "TJK": 237.9,
+        "KAZ": 350.8,
+        "TKM": 34.4,
+        "UZB": 1109.3,
+        "CA": 1923.9
+      },
+      "aal_table_difference_million_usd": {
+        "KGZ": -0.04583979923856418,
+        "TJK": -0.0007312334900291262,
+        "KAZ": 0.02476691816445964,
+        "TKM": 0.003664978538928665,
+        "UZB": -0.0047088013013762975,
+        "CA": -0.022869736782013206
+      },
+      "aal_table_check": "pass: within printed 0.1 million precision, with 0.005 million allowance for export rounding",
+      "file": "seismic.npz",
+      "sha256": "ec8a93254dc4d9471792941022941d6ed5d76ab80e8950c21624393743a4bd25"
+    },
+    "flood": {
+      "regional_rows": 2000,
+      "country_order": [
+        "KGZ",
+        "TJK",
+        "KAZ",
+        "TKM",
+        "UZB"
+      ],
+      "missing_country_rows_filled_zero": {
+        "KGZ": 0,
+        "TJK": 0,
+        "KAZ": 0,
+        "TKM": 0,
+        "UZB": 0
+      },
+      "event_label_mismatches": 0,
+      "rate_mismatches": 0,
+      "regional_reconciliation_failures": 0,
+      "maximum_absolute_regional_residual_usd": 15000.0,
+      "maximum_fraction_of_tolerance": 0.7375886523776469,
+      "maximum_relative_regional_residual": 7.37709059673589e-06,
+      "strict_half_unit_failures": 49,
+      "rounding_rule": "one unit at sixth significant digit per national and regional mean loss; 0.000002 USD absolute allowance; permits export aggregation differences",
+      "regional_rate_sum_per_year": 1.0000000000000004,
+      "source_rate_values": [
+        0.0005
+      ],
+      "national_aal_usd": {
+        "KGZ": 95094690.30000007,
+        "TJK": 176985064.40500006,
+        "KAZ": 1165610971.5,
+        "TKM": 123012887.48499988,
+        "UZB": 630149243.25
+      },
+      "regional_aal_usd": 2190853126.5,
+      "resolution": "Use ID within each peril and source version. Zero-fill is the baseline convention for absent national rows, validated by regional reconciliation within the declared export tolerance. No cross-peril ID matching.",
+      "published_aal_million_usd": {
+        "KGZ": 95.1,
+        "TJK": 177.0,
+        "KAZ": 1165.6,
+        "TKM": 123.0,
+        "UZB": 630.2,
+        "CA": 2190.9
+      },
+      "aal_table_difference_million_usd": {
+        "KGZ": -0.00530969999992692,
+        "TJK": -0.01493559499994035,
+        "KAZ": 0.010971500000096057,
+        "TKM": 0.012887484999879462,
+        "UZB": -0.05075675000000501,
+        "CA": -0.046873499999946944
+      },
+      "aal_table_check": "pass: within printed 0.1 million precision, with 0.005 million allowance for export rounding",
+      "file": "flood.npz",
+      "sha256": "a843078285068838db0a7b83ba96aaecebceb4e69ba9774b99395a6e216bbaa1"
+    }
+  }
+}

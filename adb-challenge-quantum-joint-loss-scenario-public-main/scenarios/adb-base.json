@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "track": "adb_drb",
+  "terms_file": "../data/adb_terms.json",
+  "countries": [
+    "KGZ",
+    "TJK"
+  ],
+  "term_years": 3,
+  "earthquake_sublimit_usd": [
+    70000000,
+    70000000
+  ],
+  "precipitation_sublimit_usd": [
+    10000000,
+    10000000
+  ],
+  "earthquake_common_rate_multiplier": 1.0,
+  "precipitation_annual_trigger_probability": [
+    0.02,
+    0.02
+  ],
+  "precipitation_common_rate_share": 0.25,
+  "precipitation_rate_multiplier": 1.0,
+  "portfolio_threshold_usd": 80000000,
+  "assumptions": "Stationary independent Poisson events; independent perils; independent severity marks conditional on a shared earthquake. Precipitation frequency and common share are illustrative. Coupon valuation and operational trigger calculations are excluded."
+}

@@ -1,0 +1,62 @@
+{
+  "title": "ADB 2026 disaster relief bonds: public inputs",
+  "accessed": "2026-10-15",
+  "sources": {
+    "KGZ": {
+      "url": "https://www.sec.gov/Archives/edgar/data/311669/000114036126016291/ef20071016_dstrbrpt.htm",
+      "sections": "PS-3; PS-16 to PS-19; Appendix E-II Tables 1, 3 and 10"
+    },
+    "TJK": {
+      "url": "https://www.sec.gov/Archives/edgar/data/311669/000114036126016292/ef20071017_dstrbrpt.htm",
+      "sections": "PS-3; PS-16 to PS-19; Appendix E-II Tables 1, 3 and 10"
+    }
+  },
+  "countries": [
+    "KGZ",
+    "TJK"
+  ],
+  "risk_years": 3,
+  "principal_usd": [
+    80000000,
+    80000000
+  ],
+  "earthquake_sublimit_usd": [
+    70000000,
+    70000000
+  ],
+  "precipitation_sublimit_usd": [
+    10000000,
+    10000000
+  ],
+  "precipitation_index_threshold": 0.85,
+  "earthquake_payout_fractions": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "annual_earthquake_exceedance_probabilities": {
+    "KGZ": [
+      0.03883,
+      0.02331,
+      0.0179,
+      0.01184
+    ],
+    "TJK": [
+      0.03925,
+      0.01743,
+      0.01332,
+      0.01043
+    ]
+  },
+  "published_annual_earthquake_expected_loss_fraction": {
+    "KGZ": 0.02296,
+    "TJK": 0.02011
+  },
+  "same_event_conditional_trigger_probabilities": {
+    "TJK_given_KGZ": 0.075,
+    "KGZ_given_TJK": 0.074
+  },
+  "input_note": "Annual exceedance probabilities describe aggregate earthquake payout fractions. The quarter-step model approximates intermediate payouts. Conditional trigger probabilities refer to the same earthquake event, not to annual joint probabilities."
+}

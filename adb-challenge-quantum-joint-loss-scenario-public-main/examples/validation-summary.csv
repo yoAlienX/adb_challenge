@@ -1,0 +1,8 @@
+scenario,status,max_relative_error,detail
+adb-base,compared,0.5176313746908369,
+adb-common-shock,compared,0.7338925305666292,
+adb-independent,compared,6.777323242624966,
+adb-rain-cover,compared,0.5176313746908369,
+adb-rain-stress,compared,0.5425014152734675,
+kaz-kgz-base,compared,0.20291512347334456,
+tjk-uzb-base,compared,0.027143696835383306,
