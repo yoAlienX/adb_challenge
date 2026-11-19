@@ -1,0 +1,5 @@
+profile_key,device,modality,qubits_available,p_2q,p_readout,target,true_amplitude,cx_per_A,cx_per_Q,max_useful_k_raw,max_useful_k_zne,rel_err_k0_raw,rel_err_k0_zne,rel_err_k1_raw,rel_err_k1_zne
+iqm_emerald,IQM Emerald (54q),superconducting,54,0.0035,0.015,term_portfolio_loss_exceedance_probability,0.012046720907534048,248,610,-1,1,27.559793783304226,0.1272831700851607,3.656636417327202,0.04099878336403001
+ionq_forte,IonQ Forte (36q),trapped_ion,36,0.001,0.005,term_portfolio_loss_exceedance_probability,0.012046720907534048,248,610,-1,4,14.115051412937078,0.01147228547843385,2.8485570424325575,0.003656117429526042
+near_term_ft_1e4,Early Fault-Tolerant (1e-4 logical),early_ftqc,100,0.0001,0.001,term_portfolio_loss_exceedance_probability,0.012046720907534048,248,610,-1,32,1.7491416102085464,0.00011452055099745653,0.5028591571656054,3.6483860669199365e-05
+quera_libra_2028,QuEra Libra (2028 Megaquop FTQC),neutral_atom_ftqc,200,1e-06,1e-06,term_portfolio_loss_exceedance_probability,0.012046720907534048,248,610,32,32,0.017146222523786853,1.1448878879666357e-08,0.005326055845271899,3.6473521463971227e-09

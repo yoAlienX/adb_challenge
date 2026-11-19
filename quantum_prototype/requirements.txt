@@ -1,0 +1,8 @@
+# CPU / local verification dependencies (Python 3.10 - 3.14)
+numpy>=1.24,<3
+scipy>=1.10,<2
+qiskit>=2.0
+matplotlib>=3.8
+pytest>=7,<10
+# Install official benchmark harness alongside:
+# pip install -e ../adb-challenge-quantum-joint-loss-scenario-public-main

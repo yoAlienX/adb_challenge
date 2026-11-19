@@ -1,0 +1,13 @@
+# NVIDIA A100 (CUDA 12) GPU dependencies (recommended Python 3.11 / 3.12)
+# Install PyTorch CUDA wheel first, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+numpy>=1.24,<3
+scipy>=1.10,<2
+qiskit>=2.0
+qiskit-aer-gpu>=0.15
+torch>=2.3
+matplotlib>=3.8
+pytest>=7,<10
+# Optional tensor-network / AWS Braket packages for Phase 2:
+# amazon-braket-sdk>=1.80
+# quimb>=1.8

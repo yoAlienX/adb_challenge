@@ -1,0 +1,3 @@
+n_sites,phys_qubits_per_site,bond_dim_chi,total_qubits,state_fidelity,mps_staircase_cx,mps_staircase_depth,grover_rudolph_cx,cx_reduction_factor
+2,4,2,8,0.9989517821173036,517,1609,254,0.4912959381044487
+2,4,4,8,0.9999999850364368,1968,2755,254,0.1290650406504065
