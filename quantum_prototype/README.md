@@ -22,7 +22,8 @@ quantum_prototype/
 │       └── resources.py               # Chakrabarti-style classical & quantum resource estimator
 ├── scripts/
 │   ├── run_benchmarks.py              # Reproducible benchmark CSV, JSON, and 4 PNG figure generator
-│   └── run_a100_experiments.py        # One-command NVIDIA A100 CUDA runner (+ optional holdout eval)
+│   ├── run_a100_experiments.py        # One-command NVIDIA A100 CUDA runner (+ optional holdout eval)
+│   └── benchmark_time_complexity.py   # Platform-aware CPU/GPU time-complexity profiler & fitter
 ├── tests/
 │   └── test_quantum_solver.py         # 15 unit & integration tests (Qiskit SV, IQAE, MPS, ZNE, CLI)
 ├── results/                           # Generated benchmark CSVs, resource JSON, and 4 PNG figures
@@ -105,6 +106,9 @@ python quantum_prototype/scripts/run_a100_experiments.py --repeats 10 --run-hold
 ### Regenerating All Benchmark Tables & Figures
 ```bash
 .venv/bin/python quantum_prototype/scripts/run_benchmarks.py --device cpu --repeats 5 --samples 8192
+
+# Platform-aware CPU/GPU empirical time-complexity profiler (auto-detects OS/CPU/GPU)
+.venv/bin/python quantum_prototype/scripts/benchmark_time_complexity.py --device auto --repeats 3
 ```
 
 ---

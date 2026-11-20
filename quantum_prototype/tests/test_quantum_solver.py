@@ -27,7 +27,6 @@ from quantum.circuits import (
 )
 from quantum.iqae import (
     StatevectorGroverEngine,
-    iqae_statevector_estimate,
     solve_bond_iqae_compact,
     solve_bond_iqae_path,
     solve_elt_iqae,
@@ -36,7 +35,6 @@ from quantum.mps import (
     benchmark_generative_mps_worldbank,
     benchmark_mps_scaling,
     build_bond_mps_exact,
-    build_synthetic_ncountry_mps,
     mps_to_staircase_unitaries,
     solve_bond_mps,
 )
@@ -272,3 +270,23 @@ def test_team_solver_cli_passes_strict_submission(
         "code_review_required" if execution == "classical_cpu" else "evidence_review_required"
     )
     assert review == expected_review
+
+
+def test_time_complexity_environment_inspection_and_fit():
+    """Verify platform-aware environment inspection and power-law complexity fitting."""
+    scripts_dir = str(PROTOTYPE_ROOT / "scripts")
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+    from benchmark_time_complexity import fit_power_law, inspect_environment
+
+    for req in ("auto", "cpu", "cuda"):
+        env = inspect_environment(req)
+        assert env["active_device"] in ("cpu", "cuda")
+        assert env["cpu_logical_cores"] >= 1
+        assert isinstance(env["hardware_label"], str) and env["hardware_label"]
+
+    fit = fit_power_law([10, 100, 1000, 10000], [0.01, 0.1, 1.0, 10.0])
+    assert fit["alpha"] == pytest.approx(1.0, abs=1e-6)
+    assert fit["r2"] == pytest.approx(1.0, abs=1e-6)
+    empty_fit = fit_power_law([10], [0.01])
+    assert empty_fit["alpha"] is None
