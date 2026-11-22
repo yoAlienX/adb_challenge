@@ -13,6 +13,7 @@ dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2"]
 [project.optional-dependencies]
 test = ["pytest>=7,<10"]
 notebook = ["jupyterlab>=4,<5"]
+quantum = ["qiskit>=2.0,<3", "qiskit-aer>=0.15"]
 
 [project.scripts]
 qjlb = "qjlb.cli:main"
