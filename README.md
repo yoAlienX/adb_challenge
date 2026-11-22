@@ -106,7 +106,7 @@ We state this transparently: on a 2-country tree model, exact enumeration (`0.2 
 
 ```text
 adb_challenge/
-├── .gitignore                                         # Root ignore rules (Python, LaTeX, IDE, private eval)
+├── .gitignore                                         # Root ignore rules (Python,  private eval)
 ├── README.md                                          # Project documentation & quickstart (this file)
 └── adb-challenge-quantum-joint-loss-scenario-public-main/
     ├── team_solver.py                                 # Official qjlb worker entrypoint (--mode tilted_iqae|hybrid|mps)
