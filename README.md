@@ -61,13 +61,17 @@ We address both walls with a **structure-first hybrid architecture** built clean
    Shared Shock (s, z) [10 states] ──► Exact χ=10 Causal MPS Contraction ──► O(n) Exact Metrics
 ```
 
-### Core Components (`src/qjlb_qae/`)
-1. **Non-Circular Causal Bayesian-Network Loader (`loader.py`, `circuits.py`):** Encodes shared seismic shocks (`s`, 3q) and shared rainfall (`z`, 1q) directly into conditionally independent country registers (`a, b` 3q each; `r1, r2` 1q each) plus 1 objective qubit (**13 qubits total**). Never builds the 100-state joint table classically, and circuit size is **completely invariant to bond term length $T \in \{1, 3, 10\}$** (verified to $<10^{-15}$).
-2. **Exponential Tilting + Factorised Linear-Depth Payoff (`solver.py`, `circuits.py`):** Tilts node conditionals $q_u(v\mid\mathrm{pa}_u) \propto p_u(v\mid\mathrm{pa}_u)e^{\gamma_u v}$ to minimise $W = \max_x f(x)p(x)/q_\gamma(x)$ (boosting `adb-base` exhaustion amplitude from $3.16\times 10^{-5}$ to $0.61$). `factorized_a_operator` replaces the monolithic 12-control UCRY (`4,218 CX`) with per-node ancilla rotations + MCX (`534–568 CX`).
-3. **Live Unitary Statevector Grover + ML-IQAE (`iqae.py`, `worldbank.py`):** Applies exact unitary Grover reflections $\mathcal{Q} = (2|\psi_A\rangle\langle\psi_A| - I)(I - 2P_{\mathrm{obj}=1})$ directly on the live statevector (verified to $<10^{-10}$ against explicit Qiskit Aer Grover circuits; no analytic $\sin^2$ shortcut), refined via joint-round Maximum Likelihood estimation inside 95% Clopper–Pearson brackets. Extends to **20 qubits** for the 421,968-event World Bank SFRARR catalogue.
-4. **Exact $\chi=10$ Causal MPS (`mps.py`) & Braket Noise/ZNE (`noise.py`):** Exploits conditional independence given $(s, z)$ to contract up to **$n = 50$ countries ($10^{50}$ states) in 0.51 s with zero truncation error**, and evaluates depolarizing + readout noise with Richardson ZNE across IQM Emerald, IonQ Forte, and QuEra Libra (2028 FT).
 
----
+### 2. Core Components (`src/qjlb_qae/`)
+
+1. **Non-Circular Causal Bayesian-Network Loader (`loader.py`, `circuits.py`):** Encodes shared seismic shocks (`s`, 3q) and shared rainfall (`z`, 1q) directly into conditionally independent country registers (`a, b` 3q each; `r1, r2` 1q each) plus 1 objective qubit (**13 qubits total**). Never builds the 100-state joint table classically, and circuit size is **completely invariant to bond term length T ∈ {1, 3, 10}** (verified to `<10^-15`).
+
+2. **Exponential Tilting + Factorised Linear-Depth Payoff (`solver.py`, `circuits.py`):** Tilts node conditionals `q_u(v|pa_u) ∝ p_u(v|pa_u)e^(γ_u v)` to minimise `W = max_x f(x)p(x)/q_γ(x)` (boosting `adb-base` exhaustion amplitude from `3.16×10^-5` to `0.61`). `factorized_a_operator` replaces the monolithic 12-control UCRY (`4,218 CX`) with per-node ancilla rotations + MCX (`534–568 CX`).
+
+3. **Live Unitary Statevector Grover + ML-IQAE (`iqae.py`, `worldbank.py`):** Applies exact unitary Grover reflections `Q = (2|ψ_A⟩⟨ψ_A| - I)(I - 2P_obj=1)` directly on the live statevector (verified to `<10^-10` against explicit Qiskit Aer Grover circuits; no analytic `sin²` shortcut), refined via joint-round Maximum Likelihood estimation inside 95% Clopper–Pearson brackets. Extends to **20 qubits** for the 421,968-event World Bank SFRARR catalogue.
+
+4. **Exact χ=10 Causal MPS (`mps.py`) & Braket Noise/ZNE (`noise.py`):** Exploits conditional independence given `(s, z)` to contract up to **n = 50 countries (10^50 states) in 0.51 s with zero truncation error**, and evaluates depolarizing + readout noise with Richardson ZNE across IQM Emerald, IonQ Forte, and QuEra Libra (2028 FT).
+
 
 ## 3. Verified Benchmark Results
 
